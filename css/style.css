@@ -1,0 +1,147 @@
+/* Basic Reset */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color: #a67b5b;
+    /* Soft chocolate color */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: 'EB Garamond', serif;
+    /* Classic serif font */
+    border-bottom: 2px solid #8b5e3c;
+    /* Darker border for a vintage touch */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Soft shadow */
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Lesson Content */
+.lesson-content {
+    text-align: justify;
+    /* Justify text in lesson content */
+    margin: 20px;
+    /* Space around the section */
+    line-height: 1.6;
+    /* Improves readability */
+}
+
+/* Quiz Button */
+.quiz-ejaan-button-container {
+    text-align: center;
+    /* Center the button */
+    margin-top: 20px;
+    /* Space between lesson content and button */
+}
+
+.quiz-ejaan-btn {
+    text-decoration: none;
+    background-color: #8b5e3c;
+    /* Soft chocolate color */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Georgia', serif;
+    transition: background-color 0.3s;
+}
+
+.quiz-ejaan-btn:hover {
+    background-color: #a67b5b;
+    /* Lighter brown on hover */
+}
+
+/* Back Button */
+.back-btn {
+    position: absolute;
+    top: 3px;
+    left: 15px;
+    font-size: 24px;
+    color: white;
+    background-color: #f5efef;
+    /* Back button color */
+    padding: 10px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #388E3C;
+    /* Hover effect */
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.lesson-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    /* Space between buttons */
+    margin-top: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    /* Remove underline */
+    background-color: #008CBA;
+    /* Button background color */
+    color: white;
+    /* Text color */
+    padding: 15px 30px;
+    /* Button padding */
+    border-radius: 5px;
+    /* Rounded corners */
+    transition: background-color 0.3s;
+    /* Smooth hover transition */
+}
+
+.btn:hover {
+    background-color: #005f73;
+    /* Darker color on hover */
+}
+
+.quiz-ejaan-content {
+    text-align: justify;
+    /* Justifies the text */
+    margin: 20px;
+    /* Optional: Adds margin for spacing */
+    line-height: 1.6;
+    /* Improves readability */
+}
+
+.feedback {
+    font-weight: bold;
+    /* Membuat teks lebih tebal */
+    margin-top: 5px;
+    /* Memberikan sedikit jarak di atas teks umpan balik */
+}
+
+.feedback.error {
+    color: red;
+    /* Warna merah untuk umpan balik salah */
+}

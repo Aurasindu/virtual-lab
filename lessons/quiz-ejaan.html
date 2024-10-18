@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Ejaan</title>
+    <link rel="stylesheet" href="../css/style.css"> <!-- Update path -->
+    <script src="../js/script.js" defer></script> <!-- Tetap menyertakan script.js -->
+</head>
+
+<body>
+    <header>
+        <h1>Kuis Ejaan</h1>
+    </header>
+
+    <main>
+        <section class="quiz-ejaan-content">
+            <h2>Pertanyaan Kuis</h2>
+            <p>Selamat datang di kuis Ejaan! Silakan jawab beberapa pertanyaan di bawah ini untuk menguji pemahaman
+                Anda.</p>
+
+            <form id="quiz-ejaan-form">
+                <div class="question">
+                    <p>1. Huruf apa yang harus digunakan di awal kalimat?</p>
+                    <input type="radio" name="q1" value="Huruf besar" required> Huruf besar<br>
+                    <input type="radio" name="q1" value="Huruf kecil"> Huruf kecil<br>
+                    <span class="feedback" id="feedback-q1"></span>
+                </div>
+
+                <div class="question">
+                    <p>2. Simbol apa yang digunakan untuk mengakhiri kalimat pernyataan?</p>
+                    <input type="radio" name="q2" value="Tanda koma" required> Tanda koma<br>
+                    <input type="radio" name="q2" value="Tanda titik"> Tanda titik<br>
+                    <span class="feedback" id="feedback-q2"></span>
+                </div>
+
+                <button type="submit" class="submit-btn">Kirim Jawaban</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
