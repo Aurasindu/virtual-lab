@@ -5,18 +5,20 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+    background: url('unsplash.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
 /* Header */
 header {
-    background-color: #67b5ea;
+    background-color: #a67b5b;
     /* Soft chocolate color */
     color: whitesmoke;
     padding: 25px;
     text-align: justify;
     font-family: 'Poppins', sans-serif;
     /* Classic serif font */
-    border-bottom: 2px solid #82cafa;
+    border-bottom: 2px solid #a67b5b;
     /* Darker border for a vintage touch */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     /* Soft shadow */
@@ -24,6 +26,12 @@ header {
 
 h1 {
     margin: 0;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    transform: translateX(-20px);
 }
 
 /* Lesson Content */
@@ -36,61 +44,39 @@ h1 {
     /* Improves readability */
 }
 
-/* Quiz Button */
-.quiz-ejaan-button-container {
-    text-align: center;
-    /* Center the button */
+.quiz-ejaan-btn-container {
+    display: flex;
+    justify-content: center;
+    /* Pusatkan horizontal */
+    align-items: center;
+    /* Pusatkan vertikal jika dibutuhkan */
     margin-top: 20px;
-    /* Space between lesson content and button */
 }
 
 .quiz-ejaan-btn {
     text-decoration: none;
     background-color: #8b5e3c;
-    /* Soft chocolate color */
     color: white;
-    padding: 12px 20px;
-    border-radius: 5px;
+    padding: 12px 24px;
+    border-radius: 8px;
     font-size: 18px;
-    font-family: 'Georgia', serif;
+    font-family: 'Poppins', sans-serif;
     transition: background-color 0.3s;
+    width: fit-content;
+    /* Supaya tombol hanya sebesar kontennya */
+    text-align: center;
 }
 
 .quiz-ejaan-btn:hover {
-    background-color: #a67b5b;
-    /* Lighter brown on hover */
+    background-color: #7a5234;
 }
 
-/* Back Button */
-.back-btn {
-    position: absolute;
-    top: 3px;
-    left: 15px;
-    font-size: 24px;
-    color: white;
-    background-color: #f5efef;
-    /* Back button color */
-    padding: 10px;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
-
-.back-btn:hover {
-    background-color: #388E3C;
-    /* Hover effect */
-}
 
 /* Footer */
 footer {
     background-color: #333;
     color: white;
-    padding: 10px;
+    padding: 1px;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -100,29 +86,25 @@ footer {
 .lesson-buttons {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    /* Space between buttons */
-    margin-top: 20px;
+    gap: 20px;
+    margin-top: 30px;
 }
 
 .btn {
-    text-decoration: none;
-    /* Remove underline */
-    background-color: #008CBA;
-    /* Button background color */
+    background-color: #a67b5b;
     color: white;
-    /* Text color */
+    border: none;
     padding: 15px 30px;
-    /* Button padding */
-    border-radius: 5px;
-    /* Rounded corners */
-    transition: background-color 0.3s;
-    /* Smooth hover transition */
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .btn:hover {
-    background-color: #005f73;
-    /* Darker color on hover */
+    background-color: #91694a;
+    transform: translateY(-3px);
+
 }
 
 .quiz-ejaan-content {
@@ -139,11 +121,6 @@ footer {
     /* Membuat teks lebih tebal */
     margin-top: 5px;
     /* Memberikan sedikit jarak di atas teks umpan balik */
-}
-
-.feedback.error {
-    color: red;
-    /* Warna merah untuk umpan balik salah */
 }
 
 .header-container {
