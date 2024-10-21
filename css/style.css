@@ -1,6 +1,6 @@
 /* Basic Reset */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
@@ -9,14 +9,14 @@ body {
 
 /* Header */
 header {
-    background-color: #a67b5b;
+    background-color: #67b5ea;
     /* Soft chocolate color */
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-family: 'EB Garamond', serif;
+    color: whitesmoke;
+    padding: 25px;
+    text-align: justify;
+    font-family: 'Poppins', sans-serif;
     /* Classic serif font */
-    border-bottom: 2px solid #8b5e3c;
+    border-bottom: 2px solid #82cafa;
     /* Darker border for a vintage touch */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     /* Soft shadow */
@@ -144,4 +144,53 @@ footer {
 .feedback.error {
     color: red;
     /* Warna merah untuk umpan balik salah */
+}
+
+.header-container {
+    background-color: #a67b5b;
+    /* Soft chocolate */
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #8b5e3c;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    /* Vertikal tengah */
+    gap: 15px;
+    /* Jarak antara logo dan teks */
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Center header secara horizontal */
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    object-fit: cover;
+    margin-top: -15px;
+}
+
+.text-container {
+    flex: 1;
+    /* Biar teks mengambil sisa ruang */
+}
+
+.site-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: white;
+    margin: 0;
+    font-size: 32px;
+}
+
+.site-tagline {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin-top: 5px;
+    font-size: 16px;
+    text-align: justify;
+    /* Supaya teks rata kiri dan kanan */
 }
