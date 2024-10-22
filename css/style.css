@@ -20,10 +20,13 @@ header {
 
 h1 {
     margin: 0;
+    text-align: justify;
+    color: white;
+    font-size: 20px;
 }
 
 h2 {
-    color: white;
+    color: black;
     text-align: center;
     transform: translateX(-20px);
 }
@@ -32,10 +35,10 @@ h2 {
 .lesson-content {
     text-align: justify;
     /* Justify text in lesson content */
-    margin: 20px;
+    margin: 25px;
     /* Space around the section */
     line-height: 1.6;
-    /* Improves readability */
+    transform: translateY(-15px);
 }
 
 .quiz-ejaan-btn-container {
@@ -56,12 +59,18 @@ h2 {
     transition: background-color 0.3s;
     width: fit-content;
     text-align: center;
-    transform: translateY(15px);
 }
 
 .quiz-ejaan-btn:hover {
     background-color: #7a5234;
     transform: translateY(-3px);
+}
+
+.quiz-ejaan-button-container {
+    display: flex;
+    justify-content: center;
+    /* Memusatkan secara horizontal */
+    margin-top: 20px;
 }
 
 
@@ -82,6 +91,9 @@ footer {
     gap: 20px;
     margin-top: 30px;
     font-family: 'Poppins', sans-serif;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    color: beige;
 }
 
 .btn {
@@ -90,6 +102,7 @@ footer {
     border: none;
     padding: 15px 30px;
     border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     font-size: 18px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
@@ -183,4 +196,21 @@ footer {
 .submit-btn:hover {
     background-color: #7a5234;
     transform: translateY(10px);
+}
+
+.awalan {
+    background-color: rgba(255, 248, 230, 0.85);
+    padding: 15px;
+    /*  border-radius: 8px; */
+    text-align: justify;
+    /*margin: 20px;*/
+    font-size: 20px;
+    font-weight: 515;
+    color: rgb(112, 70, 39);
+    padding: 20px 15px;
+    margin-bottom: 20px;
+}
+
+.pilih-materi {
+    color: beige;
 }
