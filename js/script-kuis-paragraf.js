@@ -2,9 +2,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const quizForm = document.getElementById('quiz-paragraf-form');
 
     quizForm.addEventListener('submit', function (event) {
-        event.preventDefault(); // Mencegah pengiriman form default
+        event.preventDefault();
 
-        // Menyimpan jawaban benar
+
         const correctAnswers = {
             q1: "argumentasi",
             q2: "eksposisi",
