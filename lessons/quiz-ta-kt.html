@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Tata Kata</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="../js/script-kuis-tatakata.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Kuis Tata Kata</h1>
+    </header>
+
+    <main>
+        <section class="drag-area">
+            <h2>Tempatkan kata-kata berikut sesuai dengan kaidah tata kata!</h2>
+
+            <div class="words-container">
+                <div class="draggable" draggable="true" data-category="benar">Memesona</div>
+                <div class="draggable" draggable="true" data-category="salah">Mengritik</div>
+                <div class="draggable" draggable="true" data-category="benar">Menyeleksi</div>
+                <div class="draggable" draggable="true" data-category="salah">Terpercaya</div>
+                <div class="draggable" draggable="true" data-category="benar">Mengebom</div>
+                <div class="draggable" draggable="true" data-category="salah">Menraktir</div>
+            </div>
+
+            <div class="drop-areas">
+                <div class="drop-wrapper">
+                    <p class="label">Benar</p>
+                    <div class="drop-zone" id="benar"></div>
+                </div>
+                <div class="drop-wrapper">
+                    <p class="label">Salah</p>
+                    <div class="drop-zone" id="salah"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer-materi">
+        <p>&copy; 2024 Teras Bahasa. 18222099 - Dahayu Ramaniya A.</p>
+    </footer>
+</body>
+
+</html>

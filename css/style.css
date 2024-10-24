@@ -286,3 +286,85 @@ footer {
     background-color: #91694a;
     transform: translateY(-3px);
 }
+
+.drag-area {
+    margin-top: 20px;
+}
+
+.words-container {
+    display: flex;
+    flex-direction: row;
+    /* Susun secara vertikal */
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+.draggable {
+    background-color: #a67b5b;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: grab;
+    width: 100px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.drop-areas {
+    display: flex;
+    flex-direction: column;
+    /* Susun drop zones secara vertikal */
+    align-items: center;
+    gap: 20px;
+}
+
+.drop-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #91694a;
+    margin: 0;
+}
+
+.drop-zone {
+    width: 150px;
+    height: 150px;
+    border: 2px dashed #a67b5b;
+    border-radius: 5px;
+    display: flex;
+    /* Menggunakan Flexbox */
+    flex-direction: column;
+    /* Tumpuk secara vertikal */
+    justify-content: center;
+    /* Pusatkan secara vertikal */
+    align-items: center;
+    /* Pusatkan secara horizontal */
+    background-color: rgba(139, 69, 19, 0.1);
+    color: #a67b5b;
+    font-weight: bold;
+    position: relative;
+    /* Agar teks label bisa ditampilkan di atas */
+    overflow: hidden;
+    /* Pastikan elemen tidak meluber keluar */
+    gap: 5px;
+    /* Jarak antar kata */
+}
+
+.drop-zone::before {
+    content: attr(data-label);
+    /* Mengambil label dari atribut data-label */
+    position: absolute;
+    top: -30px;
+    /* Memindahkan teks ke atas kotak */
+    font-size: 16px;
+    font-weight: bold;
+    color: #a67b5b;
+}
