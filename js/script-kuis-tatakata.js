@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 zone.appendChild(draggedItem);
                 zone.classList.remove('hovered');
 
-                // Cek apakah drop di area benar/salah sesuai
                 const category = draggedItem.getAttribute('data-category');
                 const zoneId = zone.id;
                 if (category === zoneId) {

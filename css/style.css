@@ -73,8 +73,6 @@ h2 {
     margin-top: 20px;
 }
 
-
-/* Footer */
 footer {
     background-color: #333;
     color: white;
@@ -90,6 +88,16 @@ footer {
     color: white;
     padding: 1px;
     position: sticky;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-kuis-tatakata {
+    background-color: #333;
+    color: white;
+    padding: 1px;
+    position: fixed;
     bottom: 0;
     width: 100%;
     text-align: center;
@@ -314,10 +322,10 @@ footer {
 
 .drop-areas {
     display: flex;
-    flex-direction: column;
-    /* Susun drop zones secara vertikal */
+    flex-direction: row;
     align-items: center;
     gap: 20px;
+    justify-content: center;
 }
 
 .drop-wrapper {
