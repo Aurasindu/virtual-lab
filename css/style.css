@@ -376,3 +376,8 @@ footer {
     font-weight: bold;
     color: #a67b5b;
 }
+
+#login-form {
+    display: none;
+    transition: opacity 0.3s;
+}

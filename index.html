@@ -7,43 +7,41 @@
     <title>Tata Tulis Karya Ilmiah</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script type="module" src="js/firebase.js"></script>
+    <script type="module" src="js/auth.js"></script>
 </head>
 
-<body>
-
-    <body style="background: url('unsplash.jpg') no-repeat center center fixed; background-size: cover;">
-        <header class="header-container">
-            <div class="logo-container">
-                <img src="niatnya-buat-pawm.jpg" alt="Logo Ruang Ajar" class="logo">
-                <div>
-                    <h1 class="site-title">Teras Bahasa</h1>
-                    <p class="site-tagline">Belajar Tata Tulis Karya Ilmiah kini tak lagi sulit, bersama Teras Bahasa!
-                    </p>
-                </div>
+<body style="background: url('unsplash.jpg') no-repeat center center fixed; background-size: cover;">
+    <header class="header-container">
+        <div class="logo-container">
+            <img src="niatnya-buat-pawm.jpg" alt="Logo Ruang Ajar" class="logo">
+            <div>
+                <h1 class="site-title">Teras Bahasa</h1>
+                <p class="site-tagline">Belajar Tata Tulis Karya Ilmiah kini tak lagi sulit, bersama Teras Bahasa!</p>
             </div>
-            <!-- HTML -->
-            <div class="auth-buttons">
-                <button class="auth-btn login">Log In</button>
-                <button class="auth-btn signup">Sign Up</button>
-            </div>
-        </header>
+        </div>
+        <!-- HTML -->
+        <div class="auth-buttons" id="auth-buttons">
+            <button class="auth-btn login" id="login-btn" onclick="window.location.href='login.html'">Log In</button>
+            <button class="auth-btn signup" id="signup-btn" onclick="window.location.href='signup.html'">Sign
+                Up</button>
+        </div>
+    </header>
 
+    <main>
+        <h1 class="awalan">Tata Tulis Karya Ilmiah adalah salah satu mata kuliah Tahap Persiapan Bersama (TPB) ITB, yang
+            berperan penting dalam melatih kemampuan menulis ilmiah dan mengikuti standar penulisan akademik.</h1>
+        <h2 class="pilih-materi">Pilih Materi</h2>
+        <div class="lesson-buttons">
+            <button class="btn" onclick="window.location.href='lessons/ejaan.html'">Ejaan</button>
+            <button class="btn" onclick="window.location.href='lessons/tata-kata.html'">Tata Kata</button>
+            <button class="btn" onclick="window.location.href='lessons/paragraf.html'">Paragraf</button>
+        </div>
+    </main>
 
-        <main>
-            <h1 class="awalan">Tata Tulis Karya Ilmiah adalah salah satu mata kuliah Tahap Persiapan Bersama (TPB)
-                ITB, yang berperan penting dalam melatih kemampuan menulis ilmiah dan mengikuti standar penulisan
-                akademik.</h1>
-            <h2 class="pilih-materi">Pilih Materi</h2>
-            <div class="lesson-buttons">
-                <button class="btn" onclick="window.location.href='lessons/ejaan.html'">Ejaan</button>
-                <button class="btn" onclick="window.location.href='lessons/tata-kata.html'">Tata Kata</button>
-                <button class="btn" onclick="window.location.href='lessons/paragraf.html'">Paragraf</button>
-            </div>
-        </main>
-
-        <footer>
-            <p>&copy; 2024 Teras Bahasa. 18222099 - Dahayu Ramaniya A.</p>
-        </footer>
-    </body>
+    <footer>
+        <p>&copy; 2024 Teras Bahasa. 18222099 - Dahayu Ramaniya A.</p>
+    </footer>
+</body>
 
 </html>
