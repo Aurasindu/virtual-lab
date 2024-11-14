@@ -1,7 +1,9 @@
+import { markQuizComplete } from './progress.js';
+
 document.addEventListener('DOMContentLoaded', function () {
     const quizForm = document.getElementById('quiz-ejaan-form');
 
-    quizForm.addEventListener('submit', function (event) {
+    quizForm.addEventListener('submit', async function (event) {
         event.preventDefault(); // Mencegah pengiriman form default
 
         // Menyimpan jawaban benar
@@ -27,6 +29,16 @@ document.addEventListener('DOMContentLoaded', function () {
         const feedbackQ3 = document.getElementById('feedback-q3');
         feedbackQ3.textContent = (q3Answer === correctAnswers.q3) ? 'Benar!' : 'Salah!';
         feedbackQ3.className = (q3Answer === correctAnswers.q3) ? '' : 'error';
+
+        if (q1Answer && q2Answer && q3Answer) {
+            // Update Firestore to mark this quiz as complete
+            try {
+                await markQuizComplete('ejaan'); // Call the function to mark 'ejaan' quiz as complete
+                console.log('Quiz completion recorded in Firestore');
+            } catch (error) {
+                console.error('Error updating quiz completion:', error);
+            }
+        }
     });
 });
 

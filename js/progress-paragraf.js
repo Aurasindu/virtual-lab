@@ -1,7 +1,7 @@
 import { db, auth } from './firebase.js';
 import { doc, updateDoc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 
-export async function markQuizComplete(ejaan) {
+export async function markQuizComplete(paragraf) {
     const userId = auth.currentUser?.uid;
     if (userId) {
         const userRef = doc(db, 'quizProgress', userId);
@@ -12,21 +12,17 @@ export async function markQuizComplete(ejaan) {
 
             if (!userDoc.exists()) {
                 // Kalau dokumen tidak ada, buat dokumen baru
-                await setDoc(userRef, { progress: { [ejaan]: true } });
+                await setDoc(userRef, { progress: { [paragraf]: true } });
                 console.log(`Quiz ${ejaan} marked as complete (new document created)`);
             } else {
                 // Kalau dokumen sudah ada, lanjutkan dengan update
                 await updateDoc(userRef, {
-                    [`progress.${ejaan}`]: true
+                    [`progress.${paragraf}`]: true
                 });
-                console.log(`Quiz ${ejaan} marked as complete`);
+                console.log(`Quiz ${paragraf} marked as complete`);
             }
         } catch (error) {
             console.error("Error updating progress:", error);
         }
     }
 }
-
-
-
-
