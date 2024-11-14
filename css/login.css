@@ -19,18 +19,18 @@
 .form-container input {
     width: 100%;
     padding: 12px;
-    margin: 11px 0;
+    margin: 9px auto;
     border-radius: 5px;
     border: none;
     background-color: #e0e0e0;
     font-family: 'Poppins', sans-serif;
-    margin-left: -10px;
+    margin-left: -13px;
 }
 
 .form-container button {
-    width: 100%;
-    padding: 10px;
-    background-color: #8a4b2e;
+    width: 40%;
+    padding: 8px 1px;
+    background-color: #5D3E26;
     /* Sesuaikan warna tombol */
     color: white;
     border: none;
@@ -41,7 +41,7 @@
 }
 
 .form-container button:hover {
-    background-color: #703b24;
+    background-color: #4b2718;
     /* Warna hover */
 }
 

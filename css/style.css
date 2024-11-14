@@ -273,7 +273,8 @@ footer {
 }
 
 .login,
-.logout {
+.logout,
+.progress {
     background-color: #a67b5b;
     border: 2px solid white;
     color: white;
@@ -297,6 +298,11 @@ footer {
 }
 
 .logout:hover {
+    background-color: #91694a;
+    transform: translateY(-3px);
+}
+
+.progress:hover {
     background-color: #91694a;
     transform: translateY(-3px);
 }
