@@ -9,13 +9,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <script type="module" src="js/firebase.js"></script>
     <script type="module" src="js/auth.js"></script>
-
-    <!-- Firebase SDK -->
+    <script type="module" src="js/progress.js"></script>
+    <script type="module" src="js/logout.js"></script>
     <script type="module" src="https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js"></script>
     <script type="module" src="https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js"></script>
-
     <script type="module">
-        // Firebase configuration
         const firebaseConfig = {
             apiKey: "AIzaSyBrdzKy0UlxGgQl_YNNaSRJG14Qdpe2wN4",
             authDomain: "backend-teras-bahasa.firebaseapp.com",
@@ -25,19 +23,21 @@
             appId: "1:611271543765:web:6370a2e4d9322adfbb0b5c",
             measurementId: "G-7PPH2S7RCS"
         };
-
-        // Inisialisasi Firebase
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);  // Inisialisasi auth untuk digunakan di auth.js
     </script>
-
-    <!-- Import firebase.js and auth.js after initialization -->
     <script type="module" src="js/firebase.js"></script>
     <script type="module" src="js/auth.js"></script>
 </head>
 
 <body style="background: url('unsplash.jpg') no-repeat center center fixed; background-size: cover;">
     <header class="header-container">
+        <div class="auth-buttons" id="auth-buttons">
+            <button class="auth-btn login" id="login-btn" onclick="window.location.href='login.html'">Log In</button>
+            <button class="auth-btn signup" id="signup-btn" onclick="window.location.href='signup.html'">Sign
+                Up</button>
+            <button class="auth-btn logout" id="logout-btn">Log Out</button>
+        </div>
         <div class="logo-container">
             <img src="niatnya-buat-pawm.jpg" alt="Logo Ruang Ajar" class="logo">
             <div>
@@ -46,12 +46,8 @@
             </div>
         </div>
         <!-- HTML -->
-        <div class="auth-buttons" id="auth-buttons">
-            <button class="auth-btn login" id="login-btn" onclick="window.location.href='login.html'">Log In</button>
-            <button class="auth-btn signup" id="signup-btn" onclick="window.location.href='signup.html'">Sign
-                Up</button>
-        </div>
     </header>
+
 
     <main>
         <h1 class="awalan">Tata Tulis Karya Ilmiah adalah salah satu mata kuliah Tahap Persiapan Bersama (TPB) ITB, yang
@@ -62,6 +58,13 @@
             <button class="btn" onclick="window.location.href='lessons/tata-kata.html'">Tata Kata</button>
             <button class="btn" onclick="window.location.href='lessons/paragraf.html'">Paragraf</button>
         </div>
+        <!-- Elemen untuk menampilkan progress -->
+        <div id="progress-container">
+            <p>Progress Kuismu:</p>
+            <progress id="quiz-progress" value="0" max="100"></progress>
+            <span id="progress-text">0%</span>
+        </div>
+
     </main>
 
     <footer>

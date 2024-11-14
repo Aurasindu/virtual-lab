@@ -17,15 +17,13 @@ const firebaseConfig = {
 // Inisialisasi Firebase App
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const db = getFirestore(app);
 
 if (auth) {
     console.log("Firebase Auth initialized successfully.");
 } else {
     console.error("Failed to initialize Firebase Auth.");
 }
-
-// Inisialisasi Firestore (untuk menyimpan data seperti progress kuis, dsb)
-const db = getFirestore(app);
 
 // Export auth dan db agar bisa digunakan di file lain
 export { auth, db };
