@@ -30,18 +30,23 @@ document.addEventListener('DOMContentLoaded', function () {
         feedbackQ3.textContent = (q3Answer === correctAnswers.q3) ? 'Benar!' : 'Salah!';
         feedbackQ3.className = (q3Answer === correctAnswers.q3) ? '' : 'error';
 
+        // Menyimpan jawaban pengguna
+        const answers = {
+            q1: q1Answer,
+            q2: q2Answer,
+            q3: q3Answer
+        };
+
         if (q1Answer && q2Answer && q3Answer) {
-            // Update Firestore to mark this quiz as complete
+            // Update Firestore untuk menandai quiz sebagai selesai dan menyimpan jawaban
             try {
-                await markQuizComplete('ejaan'); // Call the function to mark 'ejaan' quiz as complete
-                console.log('Quiz completion recorded in Firestore');
+                await markQuizComplete('ejaan', answers);  // Kirim jawaban ke Firebase
+                console.log('Quiz completion and answers recorded in Firestore');
             } catch (error) {
-                console.error('Error updating quiz completion:', error);
+                console.error('Error updating quiz completion and answers:', error);
             }
         }
     });
 });
-
-
 
 

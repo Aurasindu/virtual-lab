@@ -1,0 +1,49 @@
+/* CSS untuk mengatur tampilan halaman progress */
+body {
+    background: url('unsplash.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    margin: 0;
+}
+
+.progress-container {
+    background-color: #a67b5b;
+    padding: 30px 40px;
+    border-radius: 10px;
+    width: 350px;
+    text-align: left;
+}
+
+.progress-container h1 {
+    font-size: 30px;
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.progress-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.progress-item span {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.status {
+    background-color: #5D3E26;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 700;
+}

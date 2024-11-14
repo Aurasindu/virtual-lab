@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function () {
     quizForm.addEventListener('submit', async function (event) {
         event.preventDefault();
 
-
         const correctAnswers = {
             q1: "argumentasi",
             q2: "eksposisi",
