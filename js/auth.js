@@ -17,7 +17,7 @@ export async function signUp(email, password) {
         });
         console.log("Sign up successful:", userCredential.user);
         alert("Sign up berhasil! Silakan login.");
-        // Arahkan ke halaman login setelah sign-up berhasil
+
         window.location.href = "login.html";
     } catch (error) {
         console.error("Sign up failed:", error.message);

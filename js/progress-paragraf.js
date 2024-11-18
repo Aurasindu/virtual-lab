@@ -7,15 +7,15 @@ export async function markQuizComplete(paragraf) {
         const userRef = doc(db, 'quizProgress', userId);
 
         try {
-            // Cek apakah dokumen user ada
+
             const userDoc = await getDoc(userRef);
 
             if (!userDoc.exists()) {
-                // Kalau dokumen tidak ada, buat dokumen baru
+
                 await setDoc(userRef, { progress: { [paragraf]: true } });
                 console.log(`Quiz ${paragraf} marked as complete (new document created)`);
             } else {
-                // Kalau dokumen sudah ada, lanjutkan dengan update
+
                 await updateDoc(userRef, {
                     [`progress.${paragraf}`]: true
                 });

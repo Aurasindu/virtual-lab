@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Menampilkan status login pengguna
     onAuthStateChanged(auth, user => {
         if (user) {
-            // Jika pengguna sudah login, tampilkan profil
+
 
             // Mengambil data pengguna dari Firestore
             const userRef = doc(db, "users", user.uid);
@@ -27,9 +27,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.error("Gagal mengambil data pengguna:", error);
             });
         } else {
-            // Jika pengguna belum login, sembunyikan profil
-            // profileBtn.style.display = 'block';  // Tampilkan tombol "Lihat Profil"
-            // profilePage.style.display = 'none';  // Sembunyikan halaman profil
+
+            // profileBtn.style.display = 'block';  
+            // profilePage.style.display = 'none';  
         }
     });
 

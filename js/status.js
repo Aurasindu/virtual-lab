@@ -35,7 +35,7 @@ function updateProgressStatus(quizName, isCompleted) {
     const statusElement = document.querySelector(`#${quizName} .status`);
 
     if (statusElement) {
-        // Jika progress selesai (true), set status "Sudah Mengerjakan", jika belum (false), set "Belum Mengerjakan"
+
         statusElement.textContent = isCompleted ? 'Sudah Mengerjakan' : 'Belum Mengerjakan';
     }
 }

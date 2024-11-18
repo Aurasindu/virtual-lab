@@ -3,7 +3,7 @@ import { getAuth } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth
 import { getFirestore } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
 
-// Firebase configuration - Ganti dengan konfigurasi Firebase Anda
+
 const firebaseConfig = {
     apiKey: "AIzaSyBrdzKy0UlxGgQl_YNNaSRJG14Qdpe2wN4",
     authDomain: "backend-teras-bahasa.firebaseapp.com",
@@ -25,7 +25,7 @@ if (auth) {
     console.error("Failed to initialize Firebase Auth.");
 }
 
-// Export auth dan db agar bisa digunakan di file lain
+
 export { auth, db };
 
 
